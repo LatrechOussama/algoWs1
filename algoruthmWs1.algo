@@ -1,0 +1,19 @@
+ALGORITHM sentence
+VAR
+    s:STRING
+    i:INTEGER
+    NumVow,NumChar,NumWor:INTEGER=0
+BEGIN
+   Read("Write a sentence that ends with a point : ",s.toUpperCase)
+   FOR i FROM 0 TO s.length-1 STEP   DO
+     NumChar++
+   IF (s[i]=' ' OR s[i]='.') THEN
+     NumWor++
+   END_IF
+   IF (s[i]='a' OR s[i]='i' OR s[i]='y' OR s[i]='o' OR s[i]='e' OR s[i]='u' ) THEN
+     NumVow++
+   END_IF
+   Write("The length of the sentence is : ",NumChar,"The number of words in the sentence is : ",NumWor,"The number of vowels in the sentence is : ",NumVow)
+   END_FOR
+
+END
